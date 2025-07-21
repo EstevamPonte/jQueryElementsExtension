@@ -2,7 +2,7 @@ function extractJQueryEvents() {
   if (!window.jQuery || !$0) return {};
 
   const results = { __proto__: null };
-  const path = [];
+  const path = [document];
   let el = $0;
 
   while (el) {
@@ -12,7 +12,7 @@ function extractJQueryEvents() {
 
   for (let i = 0; i < path.length; i++) {
     const elem = path[i];
-    const tag = elem.tagName ? elem.tagName.toLowerCase() : "unknown";
+    const tag = elem.nodeName ? elem.nodeName.toLowerCase() : "unknown";
     const id = elem.id ? `#${elem.id}` : "";
     const classes = elem.classList && elem.classList.length ? "." + Array.from(elem.classList).join(".") : "";
     const origin = `${tag}${id}${classes}`;
