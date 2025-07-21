@@ -3,6 +3,7 @@ jQuery Elements (Extension)
 
 This extension helps identify jQuery events attached to the element.
 
+### Tutorial
 To use this extension, simply download the files and upload them through the Google Chrome settings.
 
 The image below shows where to upload; it's necessary to enable and activate Developer mode.
